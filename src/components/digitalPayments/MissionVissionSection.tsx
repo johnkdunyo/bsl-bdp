@@ -80,15 +80,13 @@ const MissionVissionSection = () => {
           <SwiperSlide>
             <SingleSlider
               title="Mision"
-              description="Empowering individuals, businesses and communities with innovative and
-          easy-to-use digital solutions that enhance financial inclusion, foster
-          economic growth and drive sustainable development."
+              description="Our vision is to lead the digital payment revolution, transforming the way people and businesses exchange value."
             />
           </SwiperSlide>
           <SwiperSlide>
             <SingleSlider
               title="Vision"
-              description="The preferred brand in providing a unified platform for digital financial services."
+              description="To empower individuals and businesses worldwide by providing seamless, secure, and accessible digital payment solutions"
             />
           </SwiperSlide>
         </Swiper>

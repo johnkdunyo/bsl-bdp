@@ -20,23 +20,25 @@ const SingleItem = ({
   description: string;
 }) => {
   return (
-    <Animate.FadeUp className="bg-white rounded-[45px] p-5 w-full h-[18rem] sm:h-[26rem]">
-      <div className="flex flex-col justify-between items-center  gap-8 w-full h-full ">
-        <div className=" h-full flex items-center">
+    <Animate.FadeUp className="bg-white rounded-[45px] p-5 w-full h-fit sm:h-[27rem]">
+      <div className="flex flex-col justify-between   gap-2 w-full h-full ">
+        <div className=" h-[140px] flex items-center ">
           <motion.img
             whileHover={{ scale: 1.2 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
             src={`/assets/img/bdp/discover/${icon}`}
-            className="h-4/5 sm:h-3/5"
+            className="h-full w-full"
           />
         </div>
-        <div>
-          <h1
-            className="text-purple font-bold text-center  w-full  text-xl sm:text-2xl"
-            dangerouslySetInnerHTML={{ __html: title }}
-          ></h1>
-          <p className="hidden sm:block text-[#606060] text-center mt-2">
+        <div className=" h-full flex flex-col items-start">
+          <div className="h-2/5  flex justify-center w-full items-center">
+            <h1
+              className="text-purple font-bold text-center  w-full  text-xl sm:text-2xl  "
+              dangerouslySetInnerHTML={{ __html: title }}
+            ></h1>
+          </div>
+          <p className=" h-full sm:block text-[#606060] text-center mt-2">
             {description}
           </p>
         </div>
@@ -46,28 +48,39 @@ const SingleItem = ({
 };
 const DiscoverBusinessSection = () => {
   return (
-    <section className="bg-white ">
-      <section className="bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593106/bsl-website/bdp/mobile-purple-bg_e30uc4.svg')] md:bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593107/bsl-website/bdp/purple-bg_ijgw50.svg')] h-[80rem] bg-cover  bg-no-repeat sm:-mt-[12rem] -mt-[2rem] w-full  pt-32 sm:py-[27rem] z-20  ">
+    <section className="bg-white  pt-10 sm:pt-20" id="solutions">
+      <div className="text-center h-[24rem] sm:h-[22rem] flex flex-col gap-10 justify-start items-center custom-container">
+        <Animate.FadeUp className="text-3xl sm:text-4xl leading-10 sm:leading-[3.2rem] text-transparent bg-clip-text font-bold bg-gradient-to-r from-[#6600CC] to-[#CC0166]  max-w-5xl">
+          Do you want easy, fast, and secure transactions both online and
+          offline?
+        </Animate.FadeUp>
+
+        <p className="paragraphText1 text-primary w-full max-w-2xl">
+          Look no futher Broadspectrum Digital Payment is your final solution
+          for your business need.
+        </p>
+      </div>
+      <section className="bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593106/bsl-website/bdp/mobile-purple-bg_e30uc4.svg')] md:bg-[url('https://res.cloudinary.com/diek2uivi/image/upload/v1689593107/bsl-website/bdp/purple-bg_ijgw50.svg')] h-[105rem] sm:h-[115rem] lg:h-[80rem] bg-cover  bg-no-repeat sm:-mt-[12rem] -mt-[2rem] w-full  pt-32 sm:py-[10rem] md:py-[27rem] z-20  ">
         <div className=" w-full text-white  custom-container flex flex-col gap-14  z-20 ">
-          <Animate.FadeUp className="headerText3 text-center">
+          <Animate.FadeUp className="headerText3 text-center mt-8">
             Discover solutions for every business need
           </Animate.FadeUp>
 
-          <div className="flex flex-col sm:flex-row gap-8   px-6 sm:px-0 overflow-x-scroll xl:px-20 lg:gap-10">
+          <div className="grid grid-cols-1  lg:grid-cols-3 gap-10 ">
             <SingleItem
               title="MOMO $ MPOS"
               icon="momo.svg"
-              description="Payment terminals, card readers, POS hardware"
+              description="MPOS: Mobile device for accepting card payments on the go. Convenience and flexibility for businesses outside traditional locations. App/software paired with card reader for secure transactions."
             />
             <SingleItem
               title="Checkout API"
               icon="api.svg"
-              description="Payment terminals, card readers, POS hardware"
+              description="Checkout API: Enables seamless integration of online payment processing into e-commerce platforms. Streamlined checkout experience and secure transaction handling."
             />
             <SingleItem
               title="Routing & Switching <br/> Services"
               icon="routing.svg"
-              description="Payment terminals, card readers, POS hardware"
+              description="Routing and switching services in payments: Directing transaction flow and facilitating secure data transfer between entities for efficient and secure payment processing"
             />
           </div>
         </div>
