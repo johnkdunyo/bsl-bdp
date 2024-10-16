@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import ActiveLottieLoader from "../../../public/assets/lottie/loader/active-loader.json";
 import InactiveLottieLoader from "../../../public/assets/lottie/loader/inactive-loader.json";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
 
 const CustomLottieLoader = ({ status }: { status: "active" | "inactive" }) => {
   const defaultLottieOptions = {

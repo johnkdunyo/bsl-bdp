@@ -1,3 +1,4 @@
+"use client";
 import SiteLayout from "@/components/Layout/SiteLayout";
 import AboutSection from "@/components/digitalPayments/AboutSection";
 import CustomDigitalSection from "@/components/digitalPayments/CustomDigitalSection";

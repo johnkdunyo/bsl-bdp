@@ -1,8 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BDPPaymentLottieData from "../../../public/assets/lottie/bdp-payment.json";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { Animate } from "../animations/ScrollAnimator";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
 
 const lottieDefaultOptions = {
   loop: true,

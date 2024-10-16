@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { motion } from "framer-motion";
 
 import ScrollDownLottieData from "../../../public/assets/lottie/bdp-purple-scrolldown.json";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
 
 const HeroSection = () => {
   const lottieDefaultOptions = {

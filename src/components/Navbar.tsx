@@ -177,7 +177,7 @@ const CustomNavList = ({ title, href }: { title: string; href: string }) => {
             <Link href="/">
               <h1 className="hover:font-medium">Publications</h1>
             </Link>
-            <Link href="https://bsl.com.gh/gallery">
+            <Link href="https://bsl.com.gh/media">
               <h1 className="hover:font-medium">Gallery</h1>
             </Link>
           </div>
@@ -369,7 +369,7 @@ const Navbar = ({ pageName }: INavbar) => {
                   <div className="bg-white absolute h-fit w-fit text-primary px-2 py-1.5 rounded-md -ml-[25%] top-10">
                     <ul className="flex flex-col items-start justify-start font-medium  gap-1.5">
                       <li className="hover:text-secondary">
-                        <Link href="/https://bsl.com.gh/gallery">Media</Link>
+                        <Link href="https://bsl.com.gh/media">Media</Link>
                       </li>
                       <li className="hover:text-secondary">
                         <Link href="/">Newsletter</Link>
@@ -515,7 +515,7 @@ const Navbar = ({ pageName }: INavbar) => {
                 </h1>
               </Link>
 
-              <Link href="/solutions">
+              <Link href="/#solutions">
                 <h1
                   className="text-[#1D365A] font-medium text-3xl"
                   onClick={() => setOpenDesktopSiteMenu(false)}
@@ -552,7 +552,7 @@ const Navbar = ({ pageName }: INavbar) => {
                   <Link href="/">
                     <h1>Publications</h1>
                   </Link>
-                  <Link href="/">
+                  <Link href="https://bsl.com.gh/media">
                     <h1>Gallery</h1>
                   </Link>
                 </div>
@@ -574,10 +574,7 @@ const Navbar = ({ pageName }: INavbar) => {
                   <img src={"/assets/icons/menu-nav/isg.svg"} />
                 </button>
                 <button className="col">
-                  <img
-                    src={"/assets/icons/menu-nav/agro.png"}
-                    className="h-12"
-                  />
+                  <img src={"/assets/icons/agro.png"} className="h-12" />
                 </button>
               </div>
             </div>
@@ -587,7 +584,7 @@ const Navbar = ({ pageName }: INavbar) => {
                 className="custom-button1"
                 onClick={() => setOpenDesktopSiteMenu(false)}
               >
-                <Link href="/enquiry">Get in Touch</Link>
+                <Link href="/contact-us">Get in Touch</Link>
               </button>
             </div>
           </div>
@@ -645,7 +642,7 @@ const Navbar = ({ pageName }: INavbar) => {
               <div className="flex gap-16  w-5/12 items-center justify-end   text-primary relative">
                 <div className="flex gap-12  ">
                   <CustomNavButton2
-                    href="/business"
+                    href="/#solutions"
                     title="Business"
                     active={pageName === "Product & Services"}
                     textColorWhite={false}

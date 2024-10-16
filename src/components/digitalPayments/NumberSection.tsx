@@ -1,11 +1,17 @@
 import React from "react";
 
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import Counter from "../uiComponents/Counter";
 import PartnersLottieData from "../../../public/assets/lottie/bdp/partners.json";
 import ContactsLottieData from "../../../public/assets/lottie/bdp/contacts.json";
 import TransactionsLottieData from "../../../public/assets/lottie/bdp/transaction.json";
+import dynamic from "next/dynamic";
 
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
+
+//
 const SingleMobileCustomCard = ({
   title,
   value,

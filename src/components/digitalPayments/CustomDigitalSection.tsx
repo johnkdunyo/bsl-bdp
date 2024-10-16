@@ -1,6 +1,11 @@
 import React from "react";
 import BDPPaymentLottieData from "../../../public/assets/lottie/bdp-payment.json";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+});
 
 const CustomDigitalSection = () => {
   const lottieDefaultOptions = {
